@@ -63,7 +63,7 @@ function Header() {
             onClick={toggleModal}
             style={{textDecoration: 'none', color: '#fff'}}
             >
-            {'Sign out'}
+            {'Sign Out'}
             </Link>
             : 
             <Link
