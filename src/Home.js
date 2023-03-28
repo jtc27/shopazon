@@ -1,4 +1,4 @@
-//prevent initial render
+//prevent initial render useEffect
 //https://medium.com/swlh/prevent-useeffects-callback-firing-during-initial-render-the-armchair-critic-f71bc0e03536
 
 import React from 'react'
@@ -7,6 +7,7 @@ import Product from './Product'
 
 import { useStateValue } from './StateProvider'
 import { useEffect, useRef } from 'react'
+import { getCartTotal } from './reducer'
 
 import { ReactNotifications, Store } from 'react-notifications-component'
 import 'react-notifications-component/dist/theme.css' 
@@ -26,23 +27,19 @@ function Home() {
     }
   }, [cart])
 
-  const thing = 'y'
-
   const notify = () => {
     Store.addNotification({
-      title: "You Added",
-      message: cart[cart.length-1].title,
+      title: "Added: " + cart[cart.length-1].title.slice(0,65),
+      message: "$" + cart[cart.length-1].price,
       type: "success",
       insert: "top",
       container: "top-right",
       animationIn: ["animate__animated", "animate__fadeIn"],
       animationOut: ["animate__animated", "animate__fadeOut"],
       dismiss: {
-        duration: 5000,
-        onScreen: true
+        duration: 3500,
       }
     });
-    console.log(thing)
   }
 
   return (
