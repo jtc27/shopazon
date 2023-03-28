@@ -1,11 +1,53 @@
+//prevent initial render
+//https://medium.com/swlh/prevent-useeffects-callback-firing-during-initial-render-the-armchair-critic-f71bc0e03536
+
 import React from 'react'
 import './Home.css'
 import Product from './Product'
- 
+
+import { useStateValue } from './StateProvider'
+import { useEffect, useRef } from 'react'
+
+import { ReactNotifications, Store } from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css' 
+
 
 function Home() {
+
+  const [{cart, user}, dispatch] = useStateValue()
+  const initialRender = useRef(true)
+
+  useEffect(() => {
+    if (initialRender.current) {
+      console.log('initial render')
+      initialRender.current = false
+    } else {
+      notify()
+    }
+  }, [cart])
+
+  const thing = 'y'
+
+  const notify = () => {
+    Store.addNotification({
+      title: "You Added",
+      message: cart[cart.length-1].title,
+      type: "success",
+      insert: "top",
+      container: "top-right",
+      animationIn: ["animate__animated", "animate__fadeIn"],
+      animationOut: ["animate__animated", "animate__fadeOut"],
+      dismiss: {
+        duration: 5000,
+        onScreen: true
+      }
+    });
+    console.log(thing)
+  }
+
   return (
     <div className='home'>
+      <ReactNotifications/>
       <div className="home__container">
         <img src="https://m.media-amazon.com/images/I/61rr3pvwBsL._SX3000_.jpg" 
         className='home__image'
@@ -94,5 +136,7 @@ function Home() {
     </div>
   )
 }
+
+
 
 export default Home
