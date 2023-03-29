@@ -1,6 +1,7 @@
 export const initialState = {
   cart: [],
   user: null,
+  recentDelete: '',
 }
 
 //Selector
@@ -32,13 +33,15 @@ const reducer = (state, action) => {
         newCart.splice(index, 1)
         //removes the item from array
         //doesn't remove the exact item, only the 1st one with the id
+      
       } else {
         console.warn(`Cannot remove product (id: ${action.id}) as it is not in the cart`)
       }
 
       return {
         ...state,
-        cart: newCart
+        cart: newCart,
+        recentDelete: action.title
       }
 
     case 'SET_USER':

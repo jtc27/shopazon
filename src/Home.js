@@ -7,11 +7,9 @@ import Product from './Product'
 
 import { useStateValue } from './StateProvider'
 import { useEffect, useRef } from 'react'
-import { getCartTotal } from './reducer'
 
 import { ReactNotifications, Store } from 'react-notifications-component'
-import 'react-notifications-component/dist/theme.css' 
-
+import Notification from './Notification'
 
 function Home() {
 
@@ -23,23 +21,17 @@ function Home() {
       console.log('initial render')
       initialRender.current = false
     } else {
-      notify()
+      notifyPurchase()
     }
   }, [cart])
+  
 
-  const notify = () => {
-    Store.addNotification({
-      title: "Added: " + cart[cart.length-1].title.slice(0,65),
-      message: "$" + cart[cart.length-1].price,
-      type: "success",
-      insert: "top",
-      container: "top-right",
-      animationIn: ["animate__animated", "animate__fadeIn"],
-      animationOut: ["animate__animated", "animate__fadeOut"],
-      dismiss: {
-        duration: 3500,
-      }
-    });
+  const notifyPurchase = () => {
+    Notification(
+      "[ADDED] " + cart[cart.length-1].title.slice(0,65),
+      "$" + cart[cart.length-1].price,
+      3500
+    )
   }
 
   return (

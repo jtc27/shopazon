@@ -115,6 +115,11 @@
   border: 1px solid;
   position: absolute;
   top: 36px;
-  right: 25px;
-  padding: 1px 14px;
+  right: 18px;
+  padding: 1px 20px;
+  border-radius: 5px;
+}
+
+.close-modal:hover {
+  cursor: pointer;
 }

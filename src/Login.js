@@ -5,7 +5,10 @@ import { Button } from '@mui/material'
 import { useState } from 'react'
 
 import './firebase'
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+import { ReactNotifications} from 'react-notifications-component'
+import Notification from './Notification'
 
 function Login() {
 
@@ -17,35 +20,27 @@ function Login() {
   const signIn = (e) => {
     e.preventDefault();
 
+    Notification('Signing in...', 'Welcome to Shopazon', 1900)
+
     const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log('signed in')
-        navigate('/')
-        })
-        .catch(error => alert(error.message));
-  }
 
-  const register = (e) => {
-    e.preventDefault()
-
-    const auth = getAuth()
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user
-        console.log(user)
-        navigate('/')
+    setTimeout(() => signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      console.log('signed in')
+      navigate('/')
       })
       .catch(error => alert(error.message))
+      , 1500)
   }
 
   return (
     
     <div className='login'>
+      <ReactNotifications/>
       <Link to='/'>
       <img src="https://i.ibb.co/3F1ZnFk/shopazon-clear.png"
-      className='login__logo'
+      id='login__logo'
        />
        </Link>
 

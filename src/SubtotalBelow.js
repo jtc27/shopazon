@@ -3,9 +3,8 @@ import './Subtotal.css'
 import CurrencyFormat from 'react-currency-format'
 import { useStateValue } from './StateProvider'
 import { getCartTotal } from './reducer'
-import { Link } from 'react-router-dom'
 
-function Subtotal() {
+function SubtotalBelow() {
 
   const [{cart}, dispatch] = useStateValue()
 
@@ -30,11 +29,9 @@ function Subtotal() {
       prefix={"$"}
       />
 
-      <Link to='/finalcheckout'>
-        <button className='checkout__link'>Proceed to Checkout</button>
-      </Link>
+      <button>Proceed to Checkout</button>
     </div>
   )
 }
 
-export default Subtotal
+export default SubtotalBelow

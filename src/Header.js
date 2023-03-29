@@ -10,6 +10,8 @@ import { useState } from 'react';
 
 import { getAuth, signOut } from "firebase/auth";
 
+import { ReactNotifications } from 'react-notifications-component'
+import Notification from './Notification';
 
 function Header() {
 
@@ -23,13 +25,17 @@ function Header() {
   const auth = getAuth()
   const handleAuth = () => {
     if (user) {
-      signOut(auth)
+      Notification('Signing Out...', 'Thank you for visiting', 1500)
       toggleModal()
+
+      setTimeout(() => signOut(auth), 1500)
+
     }
   }
 
   return (
     <div className='header'>
+      <ReactNotifications className='notified'/>
       <Link to='/'>
       <img src="https://i.ibb.co/DD9CJjp/shopazon2.jpg"
       alt='' 
@@ -111,13 +117,10 @@ function Header() {
           <div className="overlay" onClick={toggleModal}></div>
           <div className="modal-body">Would you like to sign out?</div>
           <button className='close-modal' onClick={handleAuth}>Yes</button>
-        </div>}
-
-
+        </div>
+        }
 
       </div>
-
-
 
     </div>
   )

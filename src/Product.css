@@ -28,6 +28,7 @@
   color: #111;
   height: 25px;
   text-transform: inherit;
+  padding: 14px 19px;
 }
 
 .product > button:hover {

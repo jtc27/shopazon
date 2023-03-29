@@ -1,0 +1,15 @@
+.top__row {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  justify-content:space-around;
+  margin-right: 160px;
+  padding: 5px 10px;
+}
+
+.top__line {
+  width: 100%;
+  border-bottom: 1px solid;
+}

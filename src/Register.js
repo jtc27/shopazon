@@ -28,7 +28,6 @@ function Register() {
   }
 
   return (
-    
     <div className='register'>
       <Link to='/'>
       <img src="https://i.ibb.co/3F1ZnFk/shopazon-clear.png"

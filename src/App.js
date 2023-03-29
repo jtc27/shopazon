@@ -6,6 +6,7 @@ import Header from './Header';
 import Home from './Home';
 import Login from './Login';
 import Register from './Register'
+import FinalCheckout from './FinalCheckout';
 
 import { useEffect } from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
@@ -49,6 +50,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/checkout" element={<><Header /><Checkout /></>} />
+        <Route path="/finalcheckout" element={<><FinalCheckout /></>} />
         <Route path="/" element={<><Header /><Home /></>} />
       </Routes>
     </Router>

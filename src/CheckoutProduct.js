@@ -11,8 +11,11 @@ function CheckoutProduct({id, image, title, price, rating}) {
     //dispatch the item into data layer
     dispatch({
       type: 'REMOVE_FROM_CART',
-      id: id
+      id: id,
+      title: title
     })
+
+    console.log(id)
   }
 
   return (

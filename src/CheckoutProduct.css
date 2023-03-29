@@ -17,6 +17,7 @@
   color: #111;
   height: 25px;
   text-transform: inherit;
+  padding: 15px 15px;
 }
 
 .checkoutProduct__info > button:hover {
