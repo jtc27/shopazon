@@ -4,6 +4,7 @@ import CurrencyFormat from 'react-currency-format'
 import { useStateValue } from './StateProvider'
 import { getCartTotal } from './reducer'
 import { Link } from 'react-router-dom'
+import { Button } from '@mui/material'
 
 function Subtotal() {
 
@@ -31,7 +32,7 @@ function Subtotal() {
       />
 
       <Link to='/finalcheckout'>
-        <button className='checkout__link'>Proceed to Checkout</button>
+        <Button className='checkout__link__btn'>Proceed to Checkout</Button>
       </Link>
     </div>
   )

@@ -35,7 +35,7 @@ function Header() {
 
   return (
     <div className='header'>
-      <ReactNotifications className='notified'/>
+      <ReactNotifications className='notification'/>
       <Link to='/'>
       <img src="https://i.ibb.co/DD9CJjp/shopazon2.jpg"
       alt='' 

@@ -19,6 +19,7 @@ function Product({id, title, image, price, rating}) {
         rating: rating,
       }
     })
+    console.log('cart ' + cart[0].title)
   }
 
   return (

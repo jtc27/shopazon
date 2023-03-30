@@ -1,0 +1,36 @@
+.finalCheckoutProduct {
+  display:flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.checkoutProduct__info > button:hover {
+  background: #f9d75c !important;
+}
+
+.finalCheckoutProduct  > img {
+  object-fit: contain;
+  width: 70px;
+  height: 70px;
+}
+
+.finalCheckoutProduct__title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.finalCheckoutProduct__price {
+  font-size: 14px;
+  font-weight: 500;
+  color: brown
+}
+
+.deleteIcon {
+  padding: 20px;
+  color: darkslategray;
+}
+
+.deleteIcon:hover {
+  cursor: pointer;
+}
