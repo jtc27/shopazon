@@ -32,5 +32,6 @@
 }
 
 .deleteIcon:hover {
+  color:steelblue;
   cursor: pointer;
 }

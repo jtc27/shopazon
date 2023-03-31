@@ -10,10 +10,11 @@ import { getCartTotal } from './reducer';
 import CurrencyFormat from 'react-currency-format';
 import { Button } from '@mui/material';
 
+import { ReactNotifications} from 'react-notifications-component'
+import Notification from './Notification'
+
 import './firebase'
  
-
-
 function FinalCheckout() {
 
   const navigate = useNavigate()
@@ -24,8 +25,20 @@ function FinalCheckout() {
   const fee = subtotal * .0027
   const total = subtotal + tax + fee
 
+  const placeOrder = () => {
+    Notification(
+      'Shopazon', 
+      'Placing Order...', 
+      2500, 
+      'success',
+      'top-right',
+      )
+    setTimeout(() => navigate('/confirmation'), 2200)
+  }
+
   return (
     <div className='final__checkout'>
+      <ReactNotifications/>
 
       {/* top__row */}
       <div className="top__row">
@@ -93,20 +106,16 @@ function FinalCheckout() {
 
         <div className='total__review'>
 
-        <div className='final__btn'>
-          <Button>
-          <Link to='/finalcheckout' 
-          className='link'
+          <div className='link final__btn__lower'
           >
-            Place your order
-          </Link> 
-          </Button>
-        </div>
-     
+            <Button className='btn__lower' onClick={placeOrder}>
+            Place your order  
+            </Button>
+          </div> 
 
           <div>
           <div className='order__items total left__pad'>
-            <h4>Order total: 
+            <h4 className='order__total__lower'>Order total: 
               <CurrencyFormat
                 renderText={(value) =>(<>{value}</>)}
                 decimalScale={2}
@@ -119,28 +128,19 @@ function FinalCheckout() {
             </div>
             <p className='smaller__text terms'>By placing your order, you agree to Shopazon's privacy notice and conditions of use.</p>
           </div>
-          
-      
         </div>
-
       </div> {/* end left__column */}
 
       {/* right__column */}
       <div className="right__column">
 
         <div className='final__btn__container'>
-          <div className='final__btn__right'>
-          <Button>
-            <Link to='/finalcheckout'
-            className='link'
-            >
+            <Button className='final__btn' onClick={placeOrder}>
               Place your order
-            </Link>
-          </Button>
-          </div>
+            </Button>
         </div>
         
-        <p className='smaller__text'>By placing your order, you agree to Shopazon's privacy notice and conditions of use.</p>
+        <p className='smaller__text terms__right'>By placing your order, you agree to Shopazon's privacy notice and conditions of use.</p>
 
       <hr></hr>
       <h4 className='order__summary'>Order Summary</h4>

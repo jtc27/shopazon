@@ -1,0 +1,52 @@
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+ 
+.confirmation > .top__row {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  justify-content:space-around;
+  margin-right: 140px;
+  padding: 5px 10px;
+}
+
+.thank__you {
+  margin-top: 10px;
+}
+
+.top__line {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+.truck {
+  color:steelblue;
+}
+
+.order__info {
+  margin-top: 22px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 15px;
+  width: 40%;
+  max-height: 330px;
+  max-width: 460px;
+}
+
+.order__items__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.center {
+  text-align: center;
+  margin-left: 27px;
+}

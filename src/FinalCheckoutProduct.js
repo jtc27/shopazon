@@ -2,7 +2,6 @@ import React from 'react'
  
 import { useStateValue } from './StateProvider'
 import './FinalCheckoutProduct.css'
-import { Button } from '@mui/material' 
 import DeleteIcon from '@mui/icons-material/Delete';
 
 function FinalCheckoutProduct({id, image, title, price, rating}) {

@@ -1,12 +1,13 @@
 
 import './App.css';
-import Checkout from './Checkout';
 
 import Header from './Header';
 import Home from './Home';
 import Login from './Login';
 import Register from './Register'
+import Checkout from './Checkout';
 import FinalCheckout from './FinalCheckout';
+import Confirmation from './Confirmation';
 
 import { useEffect } from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
@@ -51,6 +52,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/checkout" element={<><Header /><Checkout /></>} />
         <Route path="/finalcheckout" element={<><FinalCheckout /></>} />
+        <Route path="/confirmation" element={<><Confirmation /></>} />
         <Route path="/" element={<><Header /><Home /></>} />
       </Routes>
     </Router>
