@@ -27,7 +27,7 @@
   margin-right: 5px;
 }
 
-.checkout__link__btn {
+.checkout__link__btn > button {
   background: #f0c14b;
   border-radius: 2px;
   width: 100%;
@@ -39,12 +39,12 @@
   text-transform: inherit;
 }
 
-.checkout__link__btn:hover {
+.checkout__link__btn > button:hover {
   background: #f9d75c !important;
   cursor: pointer;
 }
 
-.home__link__btn {
+.home__link__btn > button {
   background: lightgrey;
   border-radius: 2px;
   width: 100%;
@@ -56,6 +56,6 @@
   text-transform: inherit;
 }
 
-.home__link__btn: hover {
+.home__link__btn > button:hover {
   cursor: pointer;
 }

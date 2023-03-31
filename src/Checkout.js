@@ -25,7 +25,12 @@ function Checkout() {
         <div>
           <h2 className='checkout__title'>Your shopping cart</h2>
 
-          {recentDelete ? Notification('You removed', recentDelete, 2000, 'info', 'top-center') : ''}
+          {recentDelete ? Notification(
+            'You removed', 
+            recentDelete.slice(0,53) + '...', 
+            2500, 
+            'info', 
+            'top-left') : ''}
 
           {cart[0] ? '' 
           :

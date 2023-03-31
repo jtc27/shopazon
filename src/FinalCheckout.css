@@ -110,20 +110,22 @@
   margin-bottom: -5px;
 }
 
-.final__btn {
+.final__btn > button {
   background: #f0c14b;
   border: 1px lightgray;
   border-radius: 5px;
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
-  min-width: 170px;
+  min-width: 190px;
   height: 35px;
   padding: 5px;
   text-decoration: none;
+  text-transform: inherit;
 }
 
-.final__btn: hover {
+.final__btn > button:hover {
+  background: #f9d75c !important;
   cursor: pointer;
 }
 
@@ -140,11 +142,20 @@
   text-align: center;
 }
 
-.final__btn__right {
+.final__btn__right > button {
   background: #f0c14b;
   border: 1px lightgray;
   border-radius: 5px;
   color: #111;
-  min-width: 270px;
+  min-width: 250px;
+  height: 35px;
   padding: 5px;
+  border-color: #a88734 #9c7e31 #846a29;
+  text-decoration: none;
+  text-transform: inherit;
+}
+
+.final__btn__right > button:hover {
+  background: #f9d75c !important;
+  cursor: pointer;
 }

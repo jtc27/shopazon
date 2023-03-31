@@ -2,7 +2,7 @@ import { Store } from 'react-notifications-component'
 import 'react-notifications-component/dist/theme.css'
  
  
-const Notification = (title, message, duration, type='success', container='top-right' ) => {
+const Notification = (title, message, duration, type='success', container='top-left' ) => {
   Store.addNotification({
     title: title,
     message: message,

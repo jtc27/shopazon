@@ -8,6 +8,7 @@ import Visa from './images/visa_mini.png'
 import { useStateValue } from './StateProvider';
 import { getCartTotal } from './reducer';
 import CurrencyFormat from 'react-currency-format';
+import { Button } from '@mui/material';
 
 import './firebase'
  
@@ -92,14 +93,15 @@ function FinalCheckout() {
 
         <div className='total__review'>
 
-         
-          <button className='final__btn'>
+        <div className='final__btn'>
+          <Button>
           <Link to='/finalcheckout' 
           className='link'
           >
             Place your order
           </Link> 
-          </button>
+          </Button>
+        </div>
      
 
           <div>
@@ -127,13 +129,15 @@ function FinalCheckout() {
       <div className="right__column">
 
         <div className='final__btn__container'>
-          <button className='final__btn__right'>
-          <Link to='/finalcheckout'
-          className='link'
-          >
-            Place your order
-          </Link>
-            </button>
+          <div className='final__btn__right'>
+          <Button>
+            <Link to='/finalcheckout'
+            className='link'
+            >
+              Place your order
+            </Link>
+          </Button>
+          </div>
         </div>
         
         <p className='smaller__text'>By placing your order, you agree to Shopazon's privacy notice and conditions of use.</p>

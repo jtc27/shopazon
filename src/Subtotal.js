@@ -33,17 +33,25 @@ function Subtotal() {
 
         {
           cart[0]?
-          (<Button className='checkout__link__btn'>
+          (
+           <div className="checkout__link__btn">
+            <Button>
             <Link to='/finalcheckout' className='link'>
               Proceed to Checkout
             </Link>
-            </Button>)
+            </Button>
+          </div>
+          )
           :
-          (<Button className='home__link__btn'>
+          (
+          <div className="home__link__btn">
+          <Button>
             <Link to='/' className='link'>
               Continue Shopping
             </Link>
-            </Button>)
+            </Button>
+            </div>
+            )
         }
 
 
