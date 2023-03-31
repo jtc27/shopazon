@@ -61,7 +61,7 @@
 background: #f9d75c !important;
 }
 
-.login__container > .login__registerButton {
+.login__link > .login__registerButton {
   background: lightgray;
   border-radius: 2px;
   width: 100%;

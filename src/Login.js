@@ -77,15 +77,16 @@ function Login() {
         <p>You can sign in with <b>user@email.com</b> and the password <b>shopazon</b>.  It has been filled in already.  Or you can create a new account by clicking the button below</p>
 
       
-        <Button className='login__registerButton'
-        >
-          <Link
+        <Link
           to={'/register'} 
           style={{textDecoration: 'none', color: '#000'}} 
+          className='login__link'
           >
+        <Button className='login__registerButton'
+        >
           Create your Shopazon account
-        </Link>
         </Button>
+        </Link>
 
        </div>
 

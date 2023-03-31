@@ -27,7 +27,7 @@
   margin-right: 5px;
 }
 
-.checkout__link__btn > button {
+.sub__totalCheckout > .checkout__button {
   background: #f0c14b;
   border-radius: 2px;
   width: 100%;
@@ -39,23 +39,21 @@
   text-transform: inherit;
 }
 
-.checkout__link__btn > button:hover {
+.sub__totalCheckout > .checkout__button:hover {
   background: #f9d75c !important;
   cursor: pointer;
 }
 
-.home__link__btn > button {
+.sub__totalCheckout > .home__btn {
   background: lightgrey;
   border-radius: 2px;
   width: 100%;
   height: 30px;
   border: 1px solid;
   margin-top: 10px;
-  border-color: #a88734 #9c7e31 #846a29;
+  border-color: gray;
   color: black;
   text-transform: inherit;
 }
 
-.home__link__btn > button:hover {
-  cursor: pointer;
-}
+ 

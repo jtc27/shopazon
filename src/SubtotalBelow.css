@@ -16,7 +16,7 @@
   display:flex;
 }
 
-.below__checkout > button {
+.below__subtotal > .below__btn {
   background: #f0c14b;
   border-radius: 2px;
   width: 250px;
@@ -29,12 +29,12 @@
   text-transform: inherit;
 }
 
-.below__checkout > button:hover {
+.below__subtotal > .below__btn:hover {
   background: #f9d75c !important;
   cursor: pointer;
 }
 
-.below__home > button {
+.below__home > .below__home__btn {
   background: lightgray;
   border-radius: 2px;
   width: 250px;
@@ -47,7 +47,7 @@
   text-transform: inherit;
 }
 
-.below__home > button:hover {
+.below__home > .below__home__btn:hover {
   background:#eeeeee;
   cursor: pointer;
 }

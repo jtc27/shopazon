@@ -30,26 +30,34 @@ function Subtotal() {
       thousandSeparator={true}
       prefix={"$"}
       />
-
-        <div className="checkout__link__btn">
-          <Button>
+          
           { //THREE link options for button
             user && cart[0]? //1: user logged in with items can checkout
             (
-              <Link to='/finalcheckout' className='link'>Proceed to Checkout</Link>
+              <Link to='/finalcheckout' className='link sub__totalCheckout'>
+                <Button className='checkout__button'>
+                Proceed to Checkout
+                </Button>
+              </Link>
             )
             :
             !user && cart[0]? //2: guest with items is sent to login page
             (
-              <Link to='/login' className='link'>Login to Checkout</Link>
+              <Link to='/login' className='link sub__totalCheckout'>
+                <Button className='checkout__button'>
+                Login to Checkout
+                </Button>
+              </Link>
             )
             :
             (   //3: empty cart redirects to home page
-              <Link to='/' className='link'>Continue Shopping</Link>
+              <Link to='/' className='link sub__totalCheckout'>
+                <Button className='home__btn'>
+                Continue Shopping
+                </Button>
+              </Link>
             )
           }
-          </Button>
-        </div>
 
 
     </div>

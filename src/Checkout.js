@@ -36,13 +36,11 @@ function Checkout() {
           :
           <div className='empty__cart'><h3>There are no items in the cart</h3>
           <br/>
-          <div className="below__home">
-          <Button className='below__home__btn'>
-          <Link to='/' className='link'>
-            Continue Shopping
-          </Link>
-          </Button>
-          </div>
+            <Link to='/' className='link below__home'>
+              <Button className='below__home__btn'>
+              Continue Shopping
+              </Button>
+            </Link>
           </div>
           }
 

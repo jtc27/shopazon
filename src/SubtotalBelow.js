@@ -32,34 +32,31 @@ function SubtotalBelow() {
       />
 
       <div className='below__buttons'>
-      <div className="below__checkout">
-        <Button className='below__checkout__btn'>
         {
           user && cart[0] ?  //logged in with items
           (
-            <Link to='/finalcheckout' className='link'>
+            <Link to='/finalcheckout' className='link below__subtotal'>
+              <Button className='below__btn'>
               Proceed to Checkout
+              </Button>
             </Link>
           )
           :
           (  //guest with items is sent to login page
-            <Link to='/login' className='link'>
+            <Link to='/login' className='link below__subtotal'>
+              <Button className='below__btn'>
               Login to Checkout
+              </Button>
             </Link>
           )
         }
-        </Button>
-      </div>
 
-
-        <div className="below__home">
-          <Button className='below__home__btn'>
-          <Link to='/' className='link'>
-            Continue Shopping
-          </Link>
-          </Button>
+            <Link to='/' className='link below__home'>
+              <Button className='below__home__btn'>
+              Continue Shopping
+              </Button>
+            </Link>
         </div>
-      </div>
 
     </div>
   )
