@@ -80,10 +80,11 @@
   margin-bottom: -2px;
 }
 
-.link {
+.link__cart {
+  text-decoration: none;
   color: #FFF;
 }
-.link:hover {
+.link__cart:hover {
   color: #FFF;
 }
 

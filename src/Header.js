@@ -103,12 +103,12 @@ function Header() {
 
         <div className='header__optionCart'>
           <span className='header__cartCounter'>
-          <Link className='link' to='/checkout' style={{textDecoration: 'none'}}>
+          <Link className='link__cart' to='/checkout'>
             {cart?.length}
           </Link>
           </span>
-        <Link className='link' to='/checkout'>
-            <ShoppingCartIcon className='header__cartIcon' style={{textDecoration: 'none'}}/>
+        <Link className='link__cart' to='/checkout'>
+            <ShoppingCartIcon className='header__cartIcon'/>
         </Link>
         </div>
 

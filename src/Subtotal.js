@@ -31,9 +31,22 @@ function Subtotal() {
       prefix={"$"}
       />
 
-      <Link to='/finalcheckout'>
-        <Button className='checkout__link__btn'>Proceed to Checkout</Button>
-      </Link>
+        {
+          cart[0]?
+          (<Button className='checkout__link__btn'>
+            <Link to='/finalcheckout' className='link'>
+              Proceed to Checkout
+            </Link>
+            </Button>)
+          :
+          (<Button className='home__link__btn'>
+            <Link to='/' className='link'>
+              Continue Shopping
+            </Link>
+            </Button>)
+        }
+
+
     </div>
   )
 }

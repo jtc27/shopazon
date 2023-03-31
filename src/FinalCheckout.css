@@ -120,6 +120,20 @@
   min-width: 170px;
   height: 35px;
   padding: 5px;
+  text-decoration: none;
+}
+
+.final__btn: hover {
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  color: black;
 }
 
 .final__btn__container {

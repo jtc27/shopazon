@@ -5,6 +5,7 @@ import SubtotalBelow from './SubtotalBelow'
 import CheckoutProduct from './CheckoutProduct'
 import { useStateValue } from './StateProvider'
 import { Link } from 'react-router-dom'
+import { Button } from '@mui/material'
 
 import { ReactNotifications } from 'react-notifications-component'
 import Notification from './Notification';
@@ -24,14 +25,19 @@ function Checkout() {
         <div>
           <h2 className='checkout__title'>Your shopping cart</h2>
 
-          {recentDelete ? Notification('You removed', recentDelete, 1500, 'info', 'top-center') : ''}
+          {recentDelete ? Notification('You removed', recentDelete, 2000, 'info', 'top-center') : ''}
 
           {cart[0] ? '' 
           :
           <div className='empty__cart'><h3>There are no items in the cart</h3>
-            <Link to='/'>
-            <button className='home__button'>Continue Shopping</button> 
-            </Link>
+          <br/>
+          <div className="below__home">
+          <Button className='below__home__btn'>
+          <Link to='/' className='link'>
+            Continue Shopping
+          </Link>
+          </Button>
+          </div>
           </div>
           }
 
@@ -45,11 +51,12 @@ function Checkout() {
             />
           ))}
 
-          <SubtotalBelow/>
+          {cart[0] && <SubtotalBelow/>}
 
         </div>
       </div>
 
+      
       <div className="checkout__right">
         <h2><Subtotal/></h2>
       </div>

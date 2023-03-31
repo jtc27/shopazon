@@ -92,9 +92,15 @@ function FinalCheckout() {
 
         <div className='total__review'>
 
-          <Link to='/finalcheckout'>
-          <button className='final__btn'>Place your order</button>
-          </Link>
+         
+          <button className='final__btn'>
+          <Link to='/finalcheckout' 
+          className='link'
+          >
+            Place your order
+          </Link> 
+          </button>
+     
 
           <div>
           <div className='order__items total left__pad'>
@@ -121,9 +127,13 @@ function FinalCheckout() {
       <div className="right__column">
 
         <div className='final__btn__container'>
-        <Link to='/finalcheckout'>
-          <button className='final__btn__right'>Place your order</button>
-        </Link>
+          <button className='final__btn__right'>
+          <Link to='/finalcheckout'
+          className='link'
+          >
+            Place your order
+          </Link>
+            </button>
         </div>
         
         <p className='smaller__text'>By placing your order, you agree to Shopazon's privacy notice and conditions of use.</p>
