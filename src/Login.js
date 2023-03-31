@@ -20,7 +20,12 @@ function Login() {
   const signIn = (e) => {
     e.preventDefault();
 
-    Notification('Signing in...', 'Welcome to Shopazon', 1900)
+    Notification(
+      'Signing in...', 
+      'Welcome to Shopazon',
+      1900,
+      'success', 
+      'top-right')
 
     const auth = getAuth();
 

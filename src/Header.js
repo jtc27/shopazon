@@ -3,6 +3,7 @@ import './Header.css'
 
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 
@@ -25,7 +26,13 @@ function Header() {
   const auth = getAuth()
   const handleAuth = () => {
     if (user) {
-      Notification('Signing Out...', 'Thank you for visiting', 1500)
+      Notification(
+        'Signing Out...', 
+        'Thank you for visiting', 
+        1500, 
+        'success',
+        'top-right',
+        )
       toggleModal()
 
       setTimeout(() => signOut(auth), 1500)
@@ -59,7 +66,7 @@ function Header() {
           : 
           {textDecoration: 'none'} }  
           >
-            {user? user.email: 'Hello Guest'}
+            {user? user.email: (<div className='guest__text'>Hello Guest</div>)}
           </Link>
           </span>
 
@@ -116,7 +123,9 @@ function Header() {
         <div className='modal'>
           <div className="overlay" onClick={toggleModal}></div>
           <div className="modal-body">Would you like to sign out?</div>
-          <button className='close-modal' onClick={handleAuth}>Yes</button>
+          <div className="signout__btn">
+            <Button onClick={handleAuth}>Yes</Button>
+          </div>
         </div>
         }
 
