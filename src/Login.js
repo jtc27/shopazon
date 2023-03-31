@@ -3,6 +3,7 @@ import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button } from '@mui/material'
 import { useState } from 'react'
+import { useStateValue } from './StateProvider'
 
 import './firebase'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -14,6 +15,7 @@ function Login() {
 
   const navigate = useNavigate()
 
+  const [{cart}, dispatch] = useStateValue()
   const [email, setEmail] = useState('user@email.com')
   const [password, setPassword] = useState('shopazon')
 
@@ -30,10 +32,10 @@ function Login() {
     const auth = getAuth();
 
     setTimeout(() => signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
+    .then(() => {
       console.log('signed in')
-      navigate('/')
+      cart[0] ? navigate('/checkout') : navigate('/')
+      //if you have cart items during login, you will go to checkout page.  Otherwise it will send you home
       })
       .catch(error => alert(error.message))
       , 1500)

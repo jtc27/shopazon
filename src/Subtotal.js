@@ -8,7 +8,7 @@ import { Button } from '@mui/material'
 
 function Subtotal() {
 
-  const [{cart}, dispatch] = useStateValue()
+  const [{cart, user}, dispatch] = useStateValue()
 
   return (
     <div className='subtotal'>
@@ -31,28 +31,25 @@ function Subtotal() {
       prefix={"$"}
       />
 
-        {
-          cart[0]?
-          (
-           <div className="checkout__link__btn">
-            <Button>
-            <Link to='/finalcheckout' className='link'>
-              Proceed to Checkout
-            </Link>
-            </Button>
-          </div>
-          )
-          :
-          (
-          <div className="home__link__btn">
+        <div className="checkout__link__btn">
           <Button>
-            <Link to='/' className='link'>
-              Continue Shopping
-            </Link>
-            </Button>
-            </div>
+          { //THREE link options for button
+            user && cart[0]? //1: user logged in with items can checkout
+            (
+              <Link to='/finalcheckout' className='link'>Proceed to Checkout</Link>
             )
-        }
+            :
+            !user && cart[0]? //2: guest with items is sent to login page
+            (
+              <Link to='/login' className='link'>Login to Checkout</Link>
+            )
+            :
+            (   //3: empty cart redirects to home page
+              <Link to='/' className='link'>Continue Shopping</Link>
+            )
+          }
+          </Button>
+        </div>
 
 
     </div>

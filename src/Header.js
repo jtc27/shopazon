@@ -34,9 +34,7 @@ function Header() {
         'top-right',
         )
       toggleModal()
-
       setTimeout(() => signOut(auth), 1500)
-
     }
   }
 
