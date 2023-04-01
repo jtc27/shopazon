@@ -23,10 +23,10 @@ function Header() {
     setModal(!modal)
   }
 
-  const emptyRecentDelete = () => {
+  const clearRecentDelete = () => {
     //dispatch the item into data layer
     dispatch({
-      type: 'EMPTY_RECENT_DELETE',
+      type: 'CLEAR_RECENT_DELETE',
     })
   }
 
@@ -41,7 +41,7 @@ function Header() {
         'top-right',
       )
       toggleModal()
-      emptyRecentDelete()  //prevents recently deleted notification appearing on logout
+      clearRecentDelete()  //clears recently deleted notification appearing on logout
       setTimeout(() => signOut(auth), 1500)
     }
   }

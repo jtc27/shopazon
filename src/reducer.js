@@ -50,7 +50,7 @@ const reducer = (state, action) => {
         user: action.user
       }
     
-    case 'EMPTY_RECENT_DELETE':
+    case 'CLEAR_RECENT_DELETE':
       return {
         ...state,
         recentDelete: ''

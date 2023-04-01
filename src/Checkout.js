@@ -7,24 +7,13 @@ import { useStateValue } from './StateProvider'
 import { Link } from 'react-router-dom'
 import { Button } from '@mui/material'
 
-import { useEffect, useRef } from 'react'
-
 import { ReactNotifications } from 'react-notifications-component'
 import Notification from './Notification';
 
 function Checkout() {
 
   const [{cart, user, recentDelete}, dispatch] = useStateValue()
-  const initialRender = useRef(true)
 
-  useEffect(() => {
-    if (initialRender.current) {
-      console.log('initial render')
-      initialRender.current = false
-    } else {
-       
-    }
-  }, [user, recentDelete])
 
   return (
     <div className='checkout'>
