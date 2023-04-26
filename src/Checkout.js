@@ -14,6 +14,10 @@ function Checkout() {
 
   const [{cart, user, recentDelete}, dispatch] = useStateValue()
 
+  let result = cart.filter(function({id}) {
+    return !this.has(id) && this.add(id);
+  }, new Set)
+
 
   return (
     <div className='checkout'>
@@ -35,7 +39,7 @@ function Checkout() {
 
           {cart[0] ? '' 
           :
-          <div className='empty__cart'><h3>There are no items in the cart</h3>
+          <div className='empty__cart'><h3>There are not any items in the cart</h3>
           <br/>
             <Link to='/' className='link below__home'>
               <Button className='below__home__btn'>
@@ -45,7 +49,7 @@ function Checkout() {
           </div>
           }
 
-          {cart.map(item => (
+          {/* {cart.map(item => (
             <CheckoutProduct 
             id={item.id}
             title={item.title}
@@ -53,7 +57,11 @@ function Checkout() {
             price={item.price}
             rating={item.rating}
             />
-          ))}
+          ))} */}
+
+           {console.log(result)}
+          
+
 
           {cart[0] && <SubtotalBelow/>}
 
