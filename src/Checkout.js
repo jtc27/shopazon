@@ -49,7 +49,7 @@ function Checkout() {
           </div>
           }
 
-          {/* {cart.map(item => (
+          {cart.map(item => (
             <CheckoutProduct 
             id={item.id}
             title={item.title}
@@ -57,7 +57,7 @@ function Checkout() {
             price={item.price}
             rating={item.rating}
             />
-          ))} */}
+          ))}
 
            {console.log(result)}
           
