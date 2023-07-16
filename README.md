@@ -10,7 +10,7 @@ Shopazon is deployed at [https://shopazon-1a591.web.app/](https://shopazon-1a591
 - Authentication (Registration and Sign In, Sign Out)
 - Notifications for shopping cart and authentication
 
-<img src="src/images/mybnb-preview.png" height="350">
+<img src="src/images/shop-preview.png" height="350">
 
 If you click on the "Search Dates" button, a calendar will slide out.  The date range selector was developed at [https://www.npmjs.com/package/react-date-range](https://www.npmjs.com/package/react-date-range).  Click "Search MyBnb" to start a search.
 
