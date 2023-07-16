@@ -1,11 +1,9 @@
 # shopazon react
 
-## Deployed
-
-Shopazon is deployed at [https://shopazon-1a591.web.app/](https://shopazon-1a591.web.app/)
+Shopazon is deployed at this site: [https://shopazon-1a591.web.app/](https://shopazon-1a591.web.app/)
 
 ## About this Project
-- Online shopping portal fd
+- Online shopping portal d
 - Shopping cart can add and remove items
 - Authentication (Registration and Sign In, Sign Out)
 - Notifications for shopping cart and authentication
