@@ -2,11 +2,13 @@
 
 ## Deployed
 
-The app is deployed at [https://airbnb-clone-81d4a.web.app/](https://airbnb-clone-81d4a.web.app/)
+Shopazon is deployed at [https://shopazon-1a591.web.app/](https://shopazon-1a591.web.app/)
 
 ## About this Project
-
-This is a search app for bnb and hotel stays.
+- Online shopping portal
+- Shopping cart can add and remove items
+- Authentication (Registration and Sign In, Sign Out)
+- Notifications for shopping cart and authentication
 
 <img src="src/images/mybnb-preview.png" height="350">
 
