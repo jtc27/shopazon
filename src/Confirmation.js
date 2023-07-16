@@ -9,7 +9,6 @@ import CurrencyFormat from 'react-currency-format';
 import { Button } from '@mui/material';
 
 import './firebase'
- 
 
 
 function Confirmation() {
