@@ -1,4 +1,4 @@
-# shopazon react
+## shopazon react
 
 Shopazon is deployed at this site: [https://shopazon-1a591.web.app/](https://shopazon-1a591.web.app/)
 
@@ -18,10 +18,7 @@ Checkout is simulated with anaddress and credit card (these are not real).  When
 
 <img src="src/images/shop3.png" height="350">
 
-
-## Stack
-
-### Project
+### Stack
 
 | Dependencies  | Description |
 | ------------- | ------------- |
